@@ -43,7 +43,12 @@ module.exports = {
         // port: 5000,
         historyApiFallback: true,
     },
-    plugins: [new HtmlWebpackPlugin()],
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: 'index.html',
+            inject: true,
+        }),
+    ],
     // devServer:{
     //     contentBase: parentDir,
     //     historyApiFallback: true
