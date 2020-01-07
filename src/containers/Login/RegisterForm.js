@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { changeRegisterDetails } from '../actions/Login'
 import { connect } from 'react-redux'
 import axios from 'axios'
+import { apiURL } from '../constants'
 import { Link } from 'react-router-dom'
 import { bindActionCreators } from 'redux'
 
@@ -13,10 +14,7 @@ class RegisterForm extends Component {
     handleSubmit = async () => {
         console.log(this.props.registerState, 'Login Success')
         await axios
-            .post(
-                'http://localhost:5002/api/user/register',
-                this.props.registerState
-            )
+            .post(`${apiURL}/user/register`, this.props.registerState)
             .then(function(response) {
                 console.log({ response })
             })
