@@ -26,8 +26,8 @@ class Home extends Component {
             <div
                 style={{
                     // backgroundColor: 'blue',
-                    height: '1000px',
-                    width: '100%',
+                    height: '100vh',
+                    width: '100vw',
                     backgroundPosition: 'center',
                     backgroundImage: `url(${BackgroundImage})`,
                     backgroundRepeat: 'no-repeat',
@@ -35,18 +35,9 @@ class Home extends Component {
                 }}
             >
                 {this.renderNavBar()}
-                <h1
-                    style={{
-                        textAlign: 'center',
-                        color: 'red',
-                    }}
-                >
+                <h1 style={{ textAlign: 'center' }}>
                     Welcome To News Hunger!!!
                 </h1>
-                {/* <img
-                    src={BackgroundImage}
-                    style={{ width: 500, height: 300 }}
-                /> */}
             </div>
         )
     }

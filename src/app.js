@@ -7,6 +7,8 @@ import LoginForm from './containers/Login/LoginForm'
 import RegisterForm from './containers/Login/RegisterForm'
 import NoMatchFound from './NoMatchFound'
 
+import './assets/style.css'
+
 export default function App() {
     console.log(store, 'store')
     return (
