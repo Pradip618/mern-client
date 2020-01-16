@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { getAllNews } from './actions/Home'
+import BackgroundImage from '../assets/Images/bgImage.jpeg'
 
 class Home extends Component {
     componentDidMount() {
@@ -22,11 +23,30 @@ class Home extends Component {
 
     render() {
         return (
-            <div>
+            <div
+                style={{
+                    // backgroundColor: 'blue',
+                    height: '1000px',
+                    width: '100%',
+                    backgroundPosition: 'center',
+                    backgroundImage: `url(${BackgroundImage})`,
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: 'cover',
+                }}
+            >
                 {this.renderNavBar()}
-                <h1 style={{ textAlign: 'center' }}>
+                <h1
+                    style={{
+                        textAlign: 'center',
+                        color: 'red',
+                    }}
+                >
                     Welcome To News Hunger!!!
                 </h1>
+                {/* <img
+                    src={BackgroundImage}
+                    style={{ width: 500, height: 300 }}
+                /> */}
             </div>
         )
     }
